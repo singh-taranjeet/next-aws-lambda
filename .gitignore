@@ -2,6 +2,7 @@
 
 # dependencies
 node_modules
+.aws-sam
 /.pnp
 .pnp.js
 .yarn/install-state.gz

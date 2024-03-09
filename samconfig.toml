@@ -1,0 +1,10 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "sam-app"
+resolve_s3 = true
+s3_prefix = "sam-app"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = ["NextAppStackFunction=533267098557.dkr.ecr.us-east-1.amazonaws.com/samapp7427b055/nextappstackfunctione45a3c19repo"]

@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  serverless app to deploy next app to aws lambda
+
+Globals:
+  Function:
+    Timeout: 30
+
+Resources:
+  NextAppStackFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: app/
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        HttpEvent:
+          Type: HttpApi
+    Metadata:
+      DockerTag: v1
+      DockerContext: ./app
+      Dockerfile: Dockerfile
+Outputs:
+  NextAppStackUrl:
+    Description: "API Gateway endpoint URL for servering the next app"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/"
