@@ -3,7 +3,7 @@ All code can be found in GitHub repository and it will be maintained and updated
 
 So follow the steps as following:
 
-###Initialise the NextJS application
+## Initialise the NextJS application
 Create directory named `app` where nextJS application will be installed.
 
 Run following command to install next js application
@@ -15,7 +15,7 @@ npx create-next-app@latest
 ![next app installation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ndgclevr1xka8g5eurck.png)
 
 
-###Initialise the AWS SAM
+## Initialise the AWS SAM
 
 Now we will be using code as infrastructure to build our cloudformation stack. So initialise the sam application using the following the guide as per your Operating system [aws-docs](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 
